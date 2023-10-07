@@ -1,0 +1,7 @@
+{
+  "name": "angular-ph-pwa",
+  "integrations": {
+    "capacitor": {}
+  },
+  "type": "angular"
+}
