@@ -1,0 +1,54 @@
+<ion-header [translucent]="true">
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-back-button></ion-back-button>
+    </ion-buttons>
+    <ion-title>Mentorship Request</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="true" class="ion-padding">
+  <ion-card class="ion-text-start ion-margin-top">
+    <ion-grid>
+      <ion-row>
+        <ion-col size="8">
+          <ion-card-header>
+            <ion-card-title>Introduction to Ionic</ion-card-title>
+            <ion-card-subtitle>
+              <div>Darwin Cruz</div>
+              <div>MFW: 5:00pm-8pm</div>
+              <div>5 mentees</div>
+            </ion-card-subtitle>
+          </ion-card-header>
+        </ion-col>
+        <ion-col class="ion-padding">
+          <ion-row class="ion-justify-content-end">
+            <ion-avatar>
+              <img alt="Silhouette of mountains" src="https://ionicframework.com/docs/img/demos/thumbnail.svg" />
+            </ion-avatar>
+          </ion-row>
+        </ion-col>
+      </ion-row>
+    </ion-grid>
+  </ion-card>
+  <div class="ion-margin ion-padding">
+    <p>
+      Send a selfie for verification.
+    </p>
+    <ion-button size="small" fill="outline" (click)="openCamera()">
+      <ion-icon name="camera-outline"></ion-icon>
+      <span class="ion-margin-start">take a selfie</span>
+    </ion-button>
+  </div>
+  <div>
+    <div *ngIf="selfie">
+      <ion-img [src]="selfie"></ion-img>
+    </div>
+  </div>
+</ion-content>
+
+<ion-footer class="ion-padding ion-no-border">
+  <ion-button size="large" expand="block">
+    Submit
+  </ion-button>
+</ion-footer>

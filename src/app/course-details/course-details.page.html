@@ -1,0 +1,51 @@
+<ion-header [translucent]="true">
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-back-button></ion-back-button>
+    </ion-buttons>
+    <ion-title>Course Details</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="true" class="ion-padding">
+  <ion-card class="ion-text-start ion-margin-top">
+    <ion-grid>
+      <ion-row>
+        <ion-col size="8">
+          <ion-card-header>
+            <ion-card-title>Introduction to Ionic</ion-card-title>
+            <ion-card-subtitle>
+              <div>Darwin Cruz</div>
+              <div>MFW: 5:00pm-8pm</div>
+              <div>5 mentees</div>
+            </ion-card-subtitle>
+          </ion-card-header>
+        </ion-col>
+        <ion-col class="ion-padding">
+          <ion-row class="ion-justify-content-end">
+            <ion-avatar>
+              <img alt="Silhouette of mountains" src="https://ionicframework.com/docs/img/demos/thumbnail.svg" />
+            </ion-avatar>
+          </ion-row>
+        </ion-col>
+      </ion-row>
+    </ion-grid>
+  </ion-card>
+
+  <div class="ion-padding">
+    <p>
+      Ionic is a powerful open-source framework for developing cross-platform mobile applications. It enables developers
+      to use web technologies like HTML, CSS, and JavaScript to build high-quality, performant apps. By leveraging
+      Angular, a popular web application framework, Ionic streamlines the development process, allowing for code
+      reusability and a consistent user experience across multiple platforms, including iOS, Android, and the web. Its
+      extensive library of pre-built UI components and native integrations makes it a preferred choice for building
+      modern, feature-rich mobile applications.
+    </p>
+  </div>
+</ion-content>
+
+<ion-footer class="ion-padding ion-no-border">
+  <ion-button size="large" expand="block" [routerLink]="['/mentorship-request']">
+    Request mentorship
+  </ion-button>
+</ion-footer>

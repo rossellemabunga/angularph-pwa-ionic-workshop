@@ -1,0 +1,44 @@
+<ion-content>
+  <div id="container" class="ion-text-center ion-margin">
+    <div>
+      <ion-img src="https://angularph.org/assets/logos/angular-ph.png" alt="AngularPH Logo"></ion-img>
+      <ion-title class="ion-margin-top">Mentorsheep</ion-title>
+      <ion-note>AngularPH x PWA Ionic Workshop</ion-note>
+    </div>
+
+    <form class="ion-padding" [formGroup]="loginForm" (ngSubmit)="login()">
+      <ion-item class="ion-margin-bottom">
+        <ion-label>Email</ion-label>
+        <ion-input type="email" formControlName="email"></ion-input>
+        <ion-note *ngIf="loginForm.get('email').invalid && isSubmitted" color="danger">
+          <sub *ngIf="loginForm.get('email').errors?.['required']">
+            required *
+          </sub>
+          <sub *ngIf="loginForm.get('email').errors?.['email']">
+            invalid
+          </sub>
+        </ion-note>
+      </ion-item>
+
+      <ion-item class="ion-margin-bottom">
+        <ion-label>Password</ion-label>
+        <ion-input type="password" formControlName="password"></ion-input>
+        <ion-note *ngIf="loginForm.get('password').invalid && isSubmitted" color="danger">
+          <sub *ngIf="loginForm.get('password').errors?.['required']">
+            required *
+          </sub>
+        </ion-note>
+      </ion-item>
+
+      <div class="ion-margin">
+        <ion-text *ngIf="errorMessage" class="ion-margin" color="danger">
+          {{ errorMessage }}
+        </ion-text>
+      </div>
+
+      <ion-button type="submit" size="large" expand="block">
+        Log In
+      </ion-button>
+    </form>
+  </div>
+</ion-content>
